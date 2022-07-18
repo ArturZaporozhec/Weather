@@ -41,7 +41,7 @@
             getData.setOnAction(actionEvent -> {
                         String getUserCity = city.getText().trim();
                         if (!getUserCity.equals("")) {
-                            String output = getUrlContent("https://api.openweathermap.org/data/2.5/weather?q=" + getUserCity + "&appid=c00bfe0411132d453cbc4917646e4ae8&units=metric");
+                            String output = getUrlContent("https://api.openweathermap.org/data/2.5/weather?q=" + getUserCity + "&appid=API_ID=metric");
                             if (!output.isEmpty()) {
                                 JSONObject obj = new JSONObject(output);
                                 temp_info.setText("Температура: " + obj.getJSONObject("main").getDouble("temp"));
